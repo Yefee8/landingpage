@@ -3,8 +3,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div id="first">  
         <h1 class="title">
-          Hi ✌, <br>
-          I'm a full-stack dev.
+          Hi ✌, <br>  
+          I'm a <span style="text-shadow: 0px 0px 5px rgb(136, 0, 255);">full-stack</span>  dev.
         </h1>
       
         <i class="fa-solid fa-code" @click="toGithub"></i>
@@ -107,7 +107,7 @@ export default {
 
 .fa-code:hover{
   margin-top: calc(17.5% - 30px);
-  transform: rotate(30deg);
+  margin-left:100px;
 }
 
 .up, .down{
@@ -123,16 +123,17 @@ export default {
 }
 
 .down{
-  position: fixed;bottom: 0px;
+  position: fixed;bottom: 50px;
 }
 
 .up{
-  position: fixed;top:0px;
+  position: fixed;top:50px;
 }
 
 .down:hover, .up:hover{
-  border:2px solid skyblue;
-  color:skyblue
+  border: 2px solid rgb(136, 0, 255);
+  color:rgb(136, 0, 255);
+  filter: drop-shadow(0px 0px 15px rgb(136, 0, 255));
 }
 
 html{
@@ -200,8 +201,7 @@ height: 100vh;
 }
 
 textarea, input{
-    margin-right:400px;
-    transition: 500ms;
+    transition: 250ms;
     margin-top: 5%;
     width:400px;
     height: 40px;
@@ -217,25 +217,26 @@ textarea{
 }
 
 textarea:focus, input:focus{
-margin-right: 300px;
-box-shadow: 0px 0px 10px 0px skyblue;
+  border: 0px;
+  outline: none;
+  margin-left: 50px;
+  box-shadow: 0px 0px 10px 0px rgb(136, 0, 255);
 }
 
 #last > button{
   width: 200px;
   height: 50px;
-  border: 3px solid #222222;
+  border: 3px solid rgb(136, 0, 255);
   background: transparent;
   border-radius: 10px;
   font-size: 20px;
-  margin-right:400px;
   margin-top: 5%;
   cursor: pointer;
-  transition: 500ms;
+  transition: 250ms;
   color: white;
-  background: #222222;
+  background: rgb(136, 0, 255);
 }
-#last > button:hover{
-  margin-right: 300px;
+#last > button:hover, #last > button:focus{
+  margin-left: 50px;
 }
 </style>
